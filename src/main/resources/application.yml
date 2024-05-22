@@ -1,0 +1,5 @@
+spring:
+  application:
+    name: project03
+#server:
+#  port: $(SERVICE_PORT)

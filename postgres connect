@@ -1,0 +1,1 @@
+kubectl exec -it postgres-f678886f6-gb8lb -- psql -h localhost -U postgres --password -p 5432 postgres
