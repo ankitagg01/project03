@@ -28,4 +28,9 @@
 hs_err_pid*
 replay_pid*
 
+# folders to ignore
+target
+log
+logs
+
 # End of https://www.toptal.com/developers/gitignore/api/java
