@@ -17,7 +17,7 @@ spec:
           image: ankitagg01/springboot-crud-k8s:1.0
           ports:
             - containerPort: 8080
-          env:   # Setting Enviornmental Variables
+          env:   # Setting Enviornmental Variabls
             - name: DB_HOST   # Setting Database host address from configMap
               valueFrom :
                 configMapKeyRef :
