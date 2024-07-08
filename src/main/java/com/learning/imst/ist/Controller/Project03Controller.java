@@ -38,7 +38,7 @@ public class Project03Controller {
 
     @GetMapping(value="/getjson/clientmaster")
     public String getClientJson(){
-        logger.debug("Getting JSON object for clientmaster 1 - test");
+        logger.debug("Getting JSON object for clientmaster 1 - test final");
 //        To get JSON format of the Client Master
         String jsonStrAccMstr = new String();
         try {
