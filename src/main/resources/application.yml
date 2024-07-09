@@ -1,5 +1,36 @@
 spring:
   application:
     name: project03
+  datasource:
+    url: jdbc:postgresql://${DB_HOST}:5432/${DB_NAME}
+    username: ${DB_USERNAME}
+    password: ${DB_PASSWORD}
+    class: org.postgresql.Driver
+#
+#spring:
+#  application:
+#    name: project03
+#  datasource:
+#    url: jdbc:postgresql://127.0.0.1:54469/postgres
+#    username: intellij
+#    password: aa
+#    class: org.postgresql.Driver
+
 #server:
 #  port: $(SERVICE_PORT)
+
+
+logging:
+  logback:
+    rollingpolicy:
+      max-file-size: 1MB
+      file-name-pattern: /Users/ankitaggarwal/Desktop/logs/archived/application-%d{yyyy-MM-dd}.%i.log
+      max-history: 30
+  file:
+    name: /Users/ankitaggarwal/Desktop/logs/app.log
+  pattern:
+    console: "%black(%d{ISO8601}) %highlight(%-5level) [%blue(%t)] %yellow(%C{1.}): %msg%n%throwable"
+    file: "%d %-5level [%thread] %logger : %msg%n"
+    level: "%5p"
+  level:
+    root: DEBUG
