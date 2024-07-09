@@ -53,6 +53,23 @@ public class Project03Controller {
 
     }
 
+    @GetMapping(value="/getjson/clientmaster1")
+    public String getClientJson1(){
+        logger.debug("Getting JSON object for clientmaster 1 - test final");
+//        To get JSON format of the Client Master
+        String jsonStrAccMstr = new String();
+        try {
+            ClientMaster testcm = new ClientMaster();
+            ObjectMapper obj = new ObjectMapper();
+            jsonStrAccMstr = obj.writeValueAsString(testcm);
+        }
+        catch (JsonProcessingException e){
+            e.printStackTrace();
+        }
+        return jsonStrAccMstr;
+
+    }
+
     @GetMapping(value="/getjson/accountmaster")
     public String getAccountJson(){
         logger.debug("Getting JSON object for accountmaster");
